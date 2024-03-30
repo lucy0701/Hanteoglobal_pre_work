@@ -1,0 +1,6 @@
+.slideWrap {
+  width: 100%;
+  /* height: 235px; */
+  background-color: #fff;
+  --swiper-theme-color: #63969c;
+}

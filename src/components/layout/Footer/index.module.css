@@ -1,0 +1,21 @@
+.footerDiv {
+  width: 100%;
+  max-width: 425px;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(65, 147, 147, 0.834);
+  backdrop-filter: blur(3px);
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.footerDiv img {
+  width: 1rem;
+  height: 1rem;
+}
+.footerDiv p {
+  font-size: 15px;
+  font-weight: 700;
+}

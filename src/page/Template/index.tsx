@@ -1,17 +1,19 @@
-import { Link, Outlet } from 'react-router-dom';
+import cx from 'classnames';
+import { Outlet } from 'react-router-dom';
 
 import Banner from 'components/layout/Banner';
+import Contents from 'components/layout/Contents';
 import Footer from 'components/layout/Footer';
-import Header from 'components/layout/Header';
-
-import styles from './index.css';
+import NavigationBar from 'components/layout/NavigationBar';
 
 const Template: React.FC = () => (
-  <div>
-    <Header />
+  <div className={cx('wrap')}>
+    <NavigationBar />
     <Banner />
-    <Outlet />
-    <Footer />
+    <Contents>
+      <Outlet />
+      <Footer />
+    </Contents>
   </div>
 );
 export default Template;
