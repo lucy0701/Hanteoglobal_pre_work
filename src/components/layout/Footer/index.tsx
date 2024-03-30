@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
-    <footer>
+    <footer className={styles.footerDiv}>
       <button onClick={scrollToTop} className={styles.footerDiv}>
         <img alt="chevron-up" src="/svgs/chevron-up.svg"></img>
         <p>TOP</p>

@@ -1,30 +1,35 @@
 .listPageWrap {
   width: 100%;
   padding: 20px;
-  background-color: var(--color-gray-e);
+  background-color: var(--color-white);
   overflow: hidden;
   overflow-y: auto;
 }
-.curations {
-  font-size: 15px;
+.categoryBox {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.categoryName {
   font-weight: bold;
-  color: var(--color-gray-3);
-  margin-bottom: 10px;
+  font-size: var(--font-size-20);
+  color: var(--color-point-1);
 }
 .contntsUl {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
 }
 .contntsUl li {
   width: 100%;
   display: flex;
   gap: 10px;
   align-items: center;
-  background-color: var(--color-white);
   border-radius: var(--border-radius-4);
-  /* overflow: hidden; */
   position: relative;
 }
 .contentsImage {
@@ -32,16 +37,12 @@
   max-width: 60px;
   height: 60px;
   border-radius: var(--border-radius-4);
-  /* color: var(--color-gray-a); */
   object-fit: cover;
 }
 .textBox {
   width: 100%;
   max-width: 320px;
   min-width: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 .contents {
   font-size: 12px;
@@ -53,15 +54,11 @@
 .contentTitle {
   font-size: var(--font-size-15);
   font-weight: bold;
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
 }
 .contenCount {
   width: 30px;
 }
 .rankWrap {
-  /* width: 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;

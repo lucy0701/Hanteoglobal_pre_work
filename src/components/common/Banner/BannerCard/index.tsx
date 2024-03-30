@@ -29,7 +29,10 @@ const BannerCard: React.FC<Props> = ({ bannerData }) => {
           <h2 className={TEXT_OVERFLOW}>{bannerData.title}</h2>
           <button
             onClick={onClick}
-            className={styles.bannerBtn}
+            className={cx(styles.bannerBtn, {
+              [styles.btn_on]: bannerData.status,
+              [styles.btn_off]: !bannerData.status,
+            })}
             disabled={!bannerData.status}
           >
             투표하기

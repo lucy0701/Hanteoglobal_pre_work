@@ -12,5 +12,15 @@
 
 .listWrpa li a {
   font-size: 1rem;
+  /* font-weight: bold; */
+}
+
+a {
+  color: var(--color-gray-9);
+  font-weight: 400;
+}
+
+.selected a {
+  color: var(--color-white);
   font-weight: bold;
 }

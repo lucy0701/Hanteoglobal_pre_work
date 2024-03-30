@@ -15,36 +15,39 @@
   --color-gray-e: #eeeeee;
   --color-gray-f: #f6f6f6;
 
-  --color-bg: #f6f6f6;
+  --color-bg: #ffffff;
+  --color-point-1: #002140;
+  --color-point-2: #ffdbdc;
+  --color-point-3: #ffb0b2;
+  --color-point-4: #EA477D;
 
-  --color-point-1 : #63969c;
-
-  --border-radius-3 : 0.3rem;
-  --border-radius-4 : 0.4rem;
-  --border-radius-5 : 0.5rem;
-  --border-radius-6 : 0.6rem;
-  --border-radius-7 : 0.7rem;
+  --border-radius-3: 0.3rem;
+  --border-radius-4: 0.4rem;
+  --border-radius-5: 0.5rem;
+  --border-radius-6: 0.6rem;
+  --border-radius-7: 0.7rem;
 
   --font-size-10: 10px;
   --font-size-12: 12px;
   --font-size-13: 13px;
   --font-size-15: 15px;
+  --font-size-16: 16px;
   --font-size-18: 18px;
+  --font-size-20: 20px;
 }
 
 .wrap {
   max-width: 425px;
   min-width: 300px;
+  height: 900px;
   margin: auto;
+  /* overflow-y: auto; */
 }
 
 .contentsWrap {
   width: 100%;
   height: 615px;
-  background-color: var(--color-white);
 }
-
-
 .text_overflow {
   white-space: nowrap;
   overflow: hidden;
@@ -58,10 +61,13 @@
 .flex_between {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.flex_around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .displayNone {
   display: none;
 }
-
-
