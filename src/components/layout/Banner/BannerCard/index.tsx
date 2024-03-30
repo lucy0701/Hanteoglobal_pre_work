@@ -1,5 +1,7 @@
 import cx from 'classnames';
 
+import { FLEX_BETWEEN, FLEX_CENTER, TEXT_OVERFLOW } from 'constants/className';
+
 import styles from './index.module.css';
 
 interface Props {
@@ -7,13 +9,12 @@ interface Props {
 }
 
 const BannerCard: React.FC<Props> = ({ bannerData }) => {
-  // 투표가 있을 경우 투표 페이지로 전환
   const onClick = () => alert(`투표가 완료되었습니다`);
 
   return (
     <div className={styles.bannerImageWrap}>
       <span
-        className={cx(styles.progress, {
+        className={cx(styles.progress, FLEX_CENTER, {
           [styles.onProgress]: bannerData.status,
           [styles.finished]: !bannerData.status,
         })}
@@ -24,11 +25,11 @@ const BannerCard: React.FC<Props> = ({ bannerData }) => {
         <img alt={bannerData.url} src={bannerData.imgUrl} className={styles.bannerImage} />
       </a>
       <div className={styles.bannerTitleWrap}>
-        <div className={styles.bannerTitle}>
-          <h2>{bannerData.title}</h2>
+        <div className={cx(styles.bannerTitle, FLEX_BETWEEN)}>
+          <h2 className={TEXT_OVERFLOW}>{bannerData.title}</h2>
           <button
             onClick={onClick}
-            className={cx({ [styles.displayNone]: !bannerData.status },styles.bannerBtn)}
+            className={styles.bannerBtn}
             disabled={!bannerData.status}
           >
             투표하기

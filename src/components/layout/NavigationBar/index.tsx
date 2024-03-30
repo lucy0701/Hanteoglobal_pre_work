@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './index.module.css';
 
 const NavigationBar: React.FC = () => (
-  <header className="headerWrap">
+  <header className={styles.navWrap}>
     <nav>
       <ul className={styles.listWrpa}>
         <li>

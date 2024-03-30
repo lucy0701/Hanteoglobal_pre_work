@@ -1,5 +1,7 @@
+import cx from 'classnames';
 import { ReactNode } from 'react';
 
+import { TEXT_OVERFLOW } from 'constants/className';
 import useInfiniteScroll from 'hooks/useInfiniteScroll';
 
 import styles from './index.module.css';
@@ -40,7 +42,7 @@ const ListPage: React.FC<ListPageProps> = ({ title, url, chart }) => {
             {chart ? (
               <ContentRank index={idx}>
                 <div className={styles.contentWrap}>
-                  <p className={styles.contentTitle}>
+                  <p className={cx(styles.contentTitle, TEXT_OVERFLOW)}>
                     {title} {idx + 1}
                   </p>
                   <p className={styles.contents}>{data.name}</p>
@@ -58,7 +60,7 @@ const ListPage: React.FC<ListPageProps> = ({ title, url, chart }) => {
         ))}
       </ul>
       {isLoading && <p>Loading...</p>}
-      <div ref={obsTarget} style={{ height: '10px' }}></div>
+      <div ref={obsTarget} style={{ height: '10px' }}/>
     </div>
   );
 };

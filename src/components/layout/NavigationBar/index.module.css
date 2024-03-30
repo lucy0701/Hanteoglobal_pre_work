@@ -1,12 +1,16 @@
+.navWrap {
+  width: 100%;
+}
+
 .listWrpa {
   height: 45px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffb0b2;
+  background-color: var(--color-point-1);
 }
 
 .listWrpa li a {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: bold;
 }

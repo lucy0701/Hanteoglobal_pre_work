@@ -1,6 +1,12 @@
+.bannerWrap {
+  height: 250px;
+  padding: 13px 0 0;
+  display: flex;
+  background-color: var(--color-white);
+}
+
 .slideWrap {
   width: 100%;
-  /* height: 235px; */
-  background-color: #fff;
-  --swiper-theme-color: #63969c;
+  background-color:var(--color-white);
+  --swiper-theme-color: var(--color-point-1);
 }

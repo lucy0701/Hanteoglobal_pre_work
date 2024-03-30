@@ -4,8 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import BannerCard from 'components/layout/Banner/BannerCard';
-
+import BannerCard from './BannerCard';
 import styles from './index.module.css';
 
 const bannerImages = [
@@ -33,7 +32,7 @@ const bannerImages = [
 ];
 
 const Banner: React.FC = () => (
-  <div className="bannerWrap">
+  <div className={styles.bannerWrap}>
     <Swiper
       className={styles.slideWrap}
       modules={[Pagination, Autoplay]}

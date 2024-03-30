@@ -1,4 +1,3 @@
-import cx from 'classnames';
 import { Outlet } from 'react-router-dom';
 
 import Banner from 'components/layout/Banner';
@@ -7,7 +6,7 @@ import Footer from 'components/layout/Footer';
 import NavigationBar from 'components/layout/NavigationBar';
 
 const Template: React.FC = () => (
-  <div className={cx('wrap')}>
+  <div className="wrap">
     <NavigationBar />
     <Banner />
     <Contents>

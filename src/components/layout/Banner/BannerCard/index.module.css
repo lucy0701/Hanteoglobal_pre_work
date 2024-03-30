@@ -2,11 +2,10 @@
   width: 90%;
   height: 200px;
   position: relative;
-  background-color: aliceblue;
-  border-radius: 0.6rem;
   overflow: hidden;
   margin: auto;
-  background-color:rgb(255, 255, 255);
+  border-radius: var(--border-radius-6);
+  background-color: var(--color-white);
   box-shadow: 0 4px 8px rgba(85, 85, 85, 0.1);
 }
 .bannerImage {
@@ -14,20 +13,17 @@
   height: 142px;
 }
 .onProgress {
-  background-color: aquamarine;
+  background-color: var(--color-point-1);
 }
 .finished {
-  background-color: #eee;
+  background-color: var(--color-gray-e);
 }
 .progress {
   width: 45px;
   height: 21px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.4rem;
-  font-size: 13px;
-  font-weight: 800;
+  border-radius: var(--border-radius-4);
+  font-size: var(--font-size-13);
+  font-weight: bold;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -45,35 +41,24 @@
 }
 .bannerTitle {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .bannerTitle h2 {
   width: 245px;
-  font-size: 15px;
-  font-weight: 500px;
+  font-size: var(--font-size-15);
   letter-spacing: 1px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .bannerTitle button {
   width: 63px;
   height: 20px;
-  font-size: 10px;
   cursor: pointer;
-  background-color: #fff;
-  border: 1px solid antiquewhite;
+  font-size: var(--font-size-10);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-point-1);
   border-radius: 1rem;
 }
 .bannerDate {
   width: 100%;
-  font-size: 11px;
+  font-size: var(--font-size-12);
   text-align: right;
-}
-
-.displayNone {
-  display: none;
 }
