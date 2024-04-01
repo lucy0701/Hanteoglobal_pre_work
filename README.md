@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+[한터글로벌] 서비스개발실 프론트엔드 개발자 신입 코딩테스트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React 로 구현하는 콘텐츠 뷰 ##
 
-## Available Scripts
+**SKILL**
+* React, TypeScript
+  
+**Library**
+* swiper, axios, react-router-dom
 
-In the project directory, you can run:
+**요구 사항**
+* React 를 사용하여 구현
+* 카테고리 - “차트”, “Whook”, “이벤트”, “뉴스”, “스토어”, “충전소” 별로 동일한 리스트 페이지가 구현
+* 카테고리에 속한 콘텐츠는 리스트형 뷰로 구성되고, 무한 스크롤이 가능한 형태
+* 카테고리간 이동은 상단의 탭 메뉴 클릭과, 좌<->우 슬라이드 터치를 통해서만 가능
+* 중단의 배너 영역은 슬라이드형이며, 최소 3개의 배너로 구성하고 무한루프 동작 및 외부 링크 이동이 가능
+* 해상도는 width 425px 에 최적화
 
-### `npm start`
+**목표**
+* 컴포넌트의 재사용성, 확장성
+* 유지보수성을 높이기 위한 프로젝트 및 코드 구성
+* UI/UX 개선 (필수 X)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**기능 구현**
+* Infinite scroll : List
+   * IntersectionObserver API 사용
+   * 페이지 안에서 구현하였으나, 가독성 및 추가적인 재사용 가능성을 염려하여 커스텀 훅으로 분리
+   * List 컴포넌트에서 사용 중이며, List Item에 따라 다르게 활용이 가능
+   * List는 무한 스크롤로 List를 생성하는 역할을 함 (현재는 이미지와, 차트, 일반 목록으로 사용 중)
+  
+* Page Routing : 좌우 슬라이드 터치
+  * 리액트 라우터 돔 라이브러리의 useNavigate, useLocation 활용 커스텀 훅으로 처리
+  * 각 페이지의 Paths를 배열화 하여, 사용자가 모바일에서 드래그하면 현재 페이지에서 Index를 사용하여 이동하도록 함
+  
+* Infinite rolling slider
+  * swiper 라이브러리 사용, 2초 간격으로 자동 슬라이드 및 무한 루프 기능 활성화
 
-### `npm test`
+* 헤더 & 탑 버튼 스크롤 업/다운시 효과
+  * 스크롤바가 내려갈 경우 헤더와 탑 버튼을 보이지 않도록 처리 (반대로 올라갈 경우 보이도록 함)
+  * Template Component에서 스크롤바를 감지하는 함수 구현
+  * isVisible 상태를 통해 Header, Footer 컴포넌트 제어
+ 
+* 콘텐츠 큐레이션 (tab menu)
+  * tab 메뉴의 정보를 담은 배열로 버튼을 만들고, 버튼을 클릭할 경우 관련 된 데이터를 호출
+  * 페이지 이동을 하지 않고 List 컴포넌트에 새로운 데이터를 가져올 수 있도록 함
+ 
+* Banner Card
+  * 배너에 들어가는 이미지의 경우, 한 개의 컴포넌트로 다양하게 표현할 수 있도록 구현
+  * 진행 상황, 타이틀, 버튼, 부가 설명 등 정해진 문구가 아닌, 사용자가 원하는 텍스트를 직접 삽입하여 사용 가능
+  * ex) Text(title,duration 등)가 없고, img Url, Url만 존재할 경우 사진만 보여지며 클릭할 경우 Url로 이동
+  * 배너 외부/내부 이동: URL의 http를 구분하여 내/외부 링크를 확인하고 <a> 또는 <Link>를 사용하여 이동
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**추가**
+* Open API: 무한 스크롤 구현에 필요한 임시 데이터 (고양이, 강아지 사진)
