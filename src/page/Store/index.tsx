@@ -5,7 +5,7 @@ import List from 'layout/List';
 
 const Store: React.FC = () => (
   <div className={CONTENT_WRAP}>
-    <List title="Store" url={CATS_API_URL} listType={IMAGE_CARD} />
+    <List title="Store" subtitles={['귀여운 고양이 가득']} url={CATS_API_URL} listType={IMAGE_CARD} />
   </div>
 );
 export default Store;

@@ -22,13 +22,13 @@ const ListItems: React.FC<Props> = ({ dataList, chart }) => (
               <div>
                 <p className={styles.rank}>{idx + 1}</p>
                 {data.ranking < 800 && (
-                  <img className={styles.rankIcon} alt="caret-up-solid" src="/svgs/caret-up-solid.svg"></img>
+                  <img className={styles.rankIcon} alt="caret-up-solid" src="/svgs/caret-up-solid.svg" />
                 )}
                 {data.ranking >= 800 && data.ranking < 1500 && (
-                  <img className={styles.rankIcon} alt="minus-solid" src="/svgs/minus-solid.svg"></img>
+                  <img className={styles.rankIcon} alt="minus-solid" src="/svgs/minus-solid.svg" />
                 )}
                 {data.ranking >= 1500 && (
-                  <img className={styles.rankIcon} alt="caret-down-solid" src="/svgs/caret-down-solid.svg"></img>
+                  <img className={styles.rankIcon} alt="caret-down-solid" src="/svgs/caret-down-solid.svg" />
                 )}
               </div>
               <div className={styles.contentWrap}>
@@ -37,7 +37,7 @@ const ListItems: React.FC<Props> = ({ dataList, chart }) => (
                 </p>
                 <p className={cx(styles.contents, TEXT_OVERFLOW)}>{'Content : ' + data.thumbnail}</p>
               </div>
-              <p className={styles.contenCount}>100</p>
+              <p className={styles.contenCount}>{100 - idx}</p>
             </div>
           ) : (
             <div className={styles.contentWrap}>
