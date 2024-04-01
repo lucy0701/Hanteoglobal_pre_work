@@ -1,34 +1,19 @@
 import { useState } from 'react';
 
-import CategoryButton from 'components/common/CategoryButton';
-import ListPage from 'components/layout/ListPage';
-import { CATS_API_URL, DOGS_API_URL } from 'constants/openAPI';
-
-const categories = [
-  {
-    name: 'TEST 01',
-    apiUrl: CATS_API_URL,
-  },
-  {
-    name: 'TEST 02',
-    apiUrl: DOGS_API_URL,
-  },
-  {
-    name: 'TEST 03',
-    apiUrl: CATS_API_URL,
-  },
-];
+import TabMenu from 'components/TabMenu';
+import { CONTENT_WRAP } from 'constants/classNames';
+import { IMAGE_CARD } from 'constants/constants';
+import { TAB_MENU_WHOOK } from 'constants/tabMenu';
+import List from 'layout/List';
 
 const Whook: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedTab, setSelectedTab] = useState(TAB_MENU_WHOOK[0]);
   return (
-    <ListPage key={selectedCategory.name} title={`Whook - ${selectedCategory.name}`} url={selectedCategory.apiUrl}>
-      <CategoryButton
-        categories={categories}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-    </ListPage>
+    <div className={CONTENT_WRAP}>
+      <List key={selectedTab.name} title={`${selectedTab.name}`} url={selectedTab.apiUrl} listType={IMAGE_CARD}>
+        <TabMenu tabMenuArray={TAB_MENU_WHOOK} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      </List>
+    </div>
   );
 };
 export default Whook;

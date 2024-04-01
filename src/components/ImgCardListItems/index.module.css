@@ -1,0 +1,22 @@
+.imageUl {
+  padding: 10px 15px;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius-7);
+  border: 1.5px solid var(--color-gray-e);
+}
+.imageUl li a {
+  height: 130px;
+}
+
+.dataName {
+  font-size: var(--font-size-12);
+}
+
+.thumbnail {
+  width: 6.5rem;
+  height: 6.5rem;
+  object-fit: cover;
+  border-radius: var(--border-radius-7);
+}

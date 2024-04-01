@@ -1,11 +1,11 @@
 import { CONTENT_WRAP } from 'constants/classNames';
-import { IMAGE_CARD } from 'constants/constants';
+import { LIST } from 'constants/constants';
 import { CATS_API_URL } from 'constants/openAPIs';
 import List from 'layout/List';
 
-const Store: React.FC = () => (
+const Charge: React.FC = () => (
   <div className={CONTENT_WRAP}>
-    <List title="Store" url={CATS_API_URL} listType={IMAGE_CARD} />
+    <List title="Gratify" url={CATS_API_URL} listType={LIST} />
   </div>
 );
-export default Store;
+export default Charge;

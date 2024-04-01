@@ -1,0 +1,50 @@
+.contntsUl {
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.listLink {
+  gap: 10px;
+  border-radius: var(--border-radius-4);
+  position: relative;
+}
+.contents {
+  font-size: 12px;
+  border-radius: var(--border-radius-6);
+}
+
+.contentsImage {
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius-4);
+  object-fit: cover;
+}
+.textBox {
+  width: 90%;
+  max-width: 320px;
+  min-width: 100px;
+}
+
+.contentWrap {
+  width: 80%;
+}
+.contentTitle {
+  font-size: var(--font-size-15);
+  font-weight: bold;
+}
+.contenCount {
+  width: 30px;
+}
+
+.contenCount {
+  width: 30px;
+}
+
+.rank {
+  margin-right: 5px;
+  text-align: center;
+  font-size: var(--font-size-18);
+  font-weight: bold;
+}

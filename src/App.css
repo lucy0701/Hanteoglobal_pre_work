@@ -19,7 +19,7 @@
   --color-point-1: #002140;
   --color-point-2: #ffdbdc;
   --color-point-3: #ffb0b2;
-  --color-point-4: #EA477D;
+  --color-point-4: #ea477d;
 
   --border-radius-3: 0.3rem;
   --border-radius-4: 0.4rem;
@@ -41,12 +41,13 @@
   min-width: 300px;
   height: 900px;
   margin: auto;
-  /* overflow-y: auto; */
+  background-color: var(--color-bg);
 }
 
 .contentsWrap {
   width: 100%;
-  height: 615px;
+  min-height: 800px;
+  padding-top: 45px;
 }
 .text_overflow {
   white-space: nowrap;
@@ -68,6 +69,15 @@
   align-items: center;
   justify-content: space-around;
 }
-.displayNone {
-  display: none;
+.flex_column_between {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

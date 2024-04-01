@@ -1,0 +1,22 @@
+.footerWrap {
+  width: 100%;
+  height: 100px;
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-point-1);
+}
+
+.linkBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-gray-f);
+}
+.footerWrap p {
+  color: var(--color-gray-9);
+  font-size: var(--font-size-10);
+}

@@ -45,6 +45,7 @@ module.exports = {
     'react/jsx-no-undef': 'error',
     'react/prop-types': 'off',
     '@next/next/no-img-element': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'import/order': [
       'error',
       {

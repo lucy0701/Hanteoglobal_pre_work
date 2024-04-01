@@ -1,0 +1,73 @@
+.bannerImageWrap {
+  width: 90%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border-radius: var(--border-radius-6);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(85, 85, 85, 0.1);
+}
+.bannerImage {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.onProgress {
+  background-color: var(--color-point-4);
+  color: var(--color-white);
+}
+.finished {
+  background-color: var(--color-gray-e);
+}
+.progress {
+  padding: 2px 8px;
+  height: 23px;
+  border-radius: var(--border-radius-4);
+  font-size: var(--font-size-13);
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+}
+.bannerTitleWrap {
+  width: 100%;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff7e;
+  backdrop-filter: blur(3px);
+}
+.bannerTitle {
+  width: 100%;
+}
+.bannerTitle h2 {
+  width: 85%;
+  font-size: var(--font-size-15);
+  letter-spacing: 1px;
+}
+
+.bannerTitle button {
+  width: 63px;
+  height: 20px;
+  font-size: var(--font-size-12);
+  border-radius: 1rem;
+}
+
+.btn_on {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-point-4);
+}
+.btn_off {
+  background-color: var(--color-gray-d);
+  border: none;
+  color: var(--color-gray-9);
+}
+
+.bannerDate {
+  width: 100%;
+  font-size: var(--font-size-12);
+  text-align: right;
+  margin-top: 3px;
+}
