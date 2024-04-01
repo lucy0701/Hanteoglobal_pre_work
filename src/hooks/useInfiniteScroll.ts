@@ -34,9 +34,11 @@ const useInfiniteScroll = (apiUrl: string) => {
   const getOpenAPIData = async () => {
     try {
       const respons = await axios.get(apiUrl);
-      const newData = respons.data.map((resData: { id: string; url: string }) => ({
+      // height 랭크 업/ 다운 표시 테스트 용
+      const newData = respons.data.map((resData: { id: string; url: string; height:number; }) => ({
         name: resData.id,
         thumbnail: resData.url,
+        ranking: resData.height,
       }));
       setDataList((prevData) => [...prevData, ...newData]);
       preventRef.current = true;

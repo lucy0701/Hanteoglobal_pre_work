@@ -1,4 +1,3 @@
-import cx from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
 
 import { PATHS } from 'constants/paths';
@@ -13,12 +12,11 @@ const navItems = [
   { path: PATHS.store, text: '스토어' },
   { path: PATHS.charge, text: '충전소' },
 ];
-
-const HeaderNavBar: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
+const HeaderNavBar: React.FC = () => {
   const location = useLocation();
 
   return (
-    <header className={cx({ [styles.hidden]: !isVisible, [styles.navWrap]: isVisible })}>
+    <header className={styles.navWrap}>
       <nav>
         <ul className={styles.listWrap}>
           {navItems.map((item) => (

@@ -4,18 +4,22 @@ export const TAB_MENU_CHART = [
   {
     name: 'Global',
     apiUrl: CATS_API_URL,
+    subtitles: ['집계 기준 (KST) : 2024.03.25 ~ 2024.03.31', 'World index'],
   },
   {
     name: 'United States',
     apiUrl: DOGS_API_URL,
+    subtitles: ['집계 기준 (KST) : 2024.03.18 ~ 2024.03.24', 'United States Score'],
   },
   {
     name: 'Japan',
     apiUrl: CATS_API_URL,
+    subtitles: ['집계 기준 (KST) : 2024.03.18 ~ 2024.03.24', 'Japan Score'],
   },
   {
     name: 'China',
     apiUrl: DOGS_API_URL,
+    subtitles: ['집계 기준 (KST) : 2024.03.18 ~ 2024.03.24', 'China Score'],
   },
 ];
 

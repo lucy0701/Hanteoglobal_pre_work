@@ -25,7 +25,7 @@ const Template: React.FC = () => {
 
   return (
     <div className="wrap">
-      <HeaderNavBar isVisible={isVisible} />
+      {isVisible && <HeaderNavBar />}
       <Outlet />
       <Footer />
       {isVisible && <TopButton />}

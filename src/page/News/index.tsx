@@ -7,9 +7,10 @@ import { LIST } from 'constants/constants';
 import { TAB_MENU_NEWS } from 'constants/tabMenu';
 import List from 'layout/List';
 import { bannerDatas_news } from 'testDatas';
+import { Tab } from 'types/tab';
 
 const News: React.FC = () => {
-  const [selectedTab, setSelectedTab] = useState(TAB_MENU_NEWS[0]);
+  const [selectedTab, setSelectedTab] = useState<Tab>(TAB_MENU_NEWS[0]);
   return (
     <div className={CONTENT_WRAP}>
       <Banners bannerDatas={bannerDatas_news} />
