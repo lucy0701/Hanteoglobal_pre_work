@@ -13,7 +13,7 @@ interface Props {
   bannerDatas: BannerData[];
 }
 
-const Banners: React.FC<Props> = ({ bannerDatas }) => (
+const BannerSlider: React.FC<Props> = ({ bannerDatas }) => (
   <div className={styles.bannerWrap}>
     <Swiper
       className={styles.slideWrap}
@@ -35,4 +35,4 @@ const Banners: React.FC<Props> = ({ bannerDatas }) => (
     </Swiper>
   </div>
 );
-export default Banners;
+export default BannerSlider;

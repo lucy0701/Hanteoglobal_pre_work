@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import { ReactNode } from 'react';
 
-import ImgCardListItem from 'components/ImgCardListItems';
-import ListItems from 'components/ListItems';
+import ImgCardListItem from 'components/List/ImgCardListItems';
+import ListItems from 'components/List/ListItems';
 import { FLEX_BETWEEN, FLEX_COLUMN_BETWEEN } from 'constants/classNames';
 import { IMAGE_CARD, LIST } from 'constants/constants';
 import { PATHS } from 'constants/paths';

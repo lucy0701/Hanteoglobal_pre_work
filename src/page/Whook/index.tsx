@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
+import List from 'components/List';
 import TabMenu from 'components/TabMenu';
 import { CONTENT_WRAP } from 'constants/classNames';
 import { IMAGE_CARD } from 'constants/constants';
 import { TAB_MENU_WHOOK } from 'constants/tabMenu';
-import List from 'layout/List';
 import { Tab } from 'types/tab';
 
 const Whook: React.FC = () => {

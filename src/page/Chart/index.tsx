@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import Banners from 'components/Banners';
+import BannerSlider from 'components/BannerSlider';
+import List from 'components/List';
 import TabMenu from 'components/TabMenu';
 import { CONTENT_WRAP } from 'constants/classNames';
 import { LIST } from 'constants/constants';
 import { TAB_MENU_CHART } from 'constants/tabMenu';
-import List from 'layout/List';
 import { bannerDatas_chart } from 'testDatas';
 import { Tab } from 'types/tab';
 
@@ -14,7 +14,7 @@ const Chart: React.FC = () => {
 
   return (
     <div className={CONTENT_WRAP}>
-      <Banners bannerDatas={bannerDatas_chart} />
+      <BannerSlider bannerDatas={bannerDatas_chart} />
       <List
         key={selectedTab.name}
         title={`${selectedTab.name}`}
